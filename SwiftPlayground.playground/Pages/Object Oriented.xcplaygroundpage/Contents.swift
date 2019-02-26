@@ -1,41 +1,6 @@
-//: [Previous](@previous)
+// Reference: https://www.raywenderlich.com/599-object-oriented-programming-in-swift
 
 // Classes for modeling Musical instruments
-
-class Music {
-    let notes: [String]
-
-    init(notes: [String]) {
-        self.notes = notes
-    }
-
-    func prepared() -> String {
-        return notes.joined(separator: " ")
-    }
-}
-
-
-class Instrument {
-    let brand: String
-
-    init(brand: String) {
-        self.brand = brand
-    }
-
-    // It is an abstract method and it can not be called directly
-    func tune() -> String {
-        fatalError("Implement this method for \(brand)")
-    }
-
-    func play(_ music: Music) -> String {
-        return music.prepared()
-    }
-
-    func perform(_ music: Music) {
-        print(tune())
-        print(play(music))
-    }
-}
 
 class Piano: Instrument {
     let hasPedals: Bool
@@ -213,4 +178,3 @@ class Band {
 let instruments = [piano, rolandBrand, electricGuitar, bassGuitar]
 let band = Band(instruments: instruments)
 band.perform(music)
-//: [Next](@next)
