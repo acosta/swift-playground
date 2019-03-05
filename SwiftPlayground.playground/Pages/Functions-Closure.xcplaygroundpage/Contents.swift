@@ -1,5 +1,3 @@
-//: [Previous](@previous)
-
 import Foundation
 
 func sayHello(name: String, upperCase: Bool) {
@@ -92,7 +90,6 @@ print("Even numbers 4: \(evenNumbers4)")
 //Filter and Map methods
 let names = ["Afonso", "Luciana", "Laura", "Rosa"]
 
-let shortNames = names.filter { name in name.characters.count <= 5}
+let shortNames = names.filter { name in name.count <= 5}
                       .map { name in name.uppercased()}
 print(shortNames)
-//: [Next](@next)
