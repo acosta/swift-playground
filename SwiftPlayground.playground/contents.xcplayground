@@ -6,5 +6,6 @@
         <page name='Custom Type'/>
         <page name='Object Oriented'/>
         <page name='Collection Types'/>
+        <page name='Parsing JSON'/>
     </pages>
 </playground>
